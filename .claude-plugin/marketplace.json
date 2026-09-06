@@ -1,7 +1,7 @@
 {
   "name": "yuval",
   "owner": {
-    "name": "Yuval Shim'oni"
+    "name": "Yuval Shimoni"
   },
   "description": "Yuval's agent skills, as an installable Claude Code plugin.",
   "plugins": [
