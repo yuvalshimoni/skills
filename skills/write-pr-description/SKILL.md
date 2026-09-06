@@ -63,30 +63,7 @@ Template:
 - Include at most 2-3 examples and choose only the most impactful ones.
 - Do not add explanatory prose inside the section beyond a short bold heading for each example.
 
-Example of a prop rename:
-
-````markdown
-## At a Glance
-
-**`LabelValue` — prop rename**
-
-```diff
-- <LabelValue overline="Status" value="Active" />
-+ <LabelValue label="Status" value="Active" />
-```
-````
-
-Example of a new component:
-
-````markdown
-## At a Glance
-
-**New `AssetDescriptor` component**
-
-```tsx
-<AssetDescriptor icon={<ServerIcon />} name="prod-db-01" type="Database Instance" />
-```
-````
+Need a worked example? Read [references/examples.md](references/examples.md).
 
 ## 3. Decide whether a Review Guide is useful
 
@@ -107,47 +84,7 @@ Skip it for:
 
 When in doubt, omit it.
 
-## 4. Organize the Review Guide by dependency
-
-When a Review Guide is useful, organize only the changed files in the PR by review dependency.
-
-- **Root** — the core change and best place to start reviewing.
-- **Level 1** — changes that directly depend on the root.
-- **Level 2+** — downstream changes such as tests, documentation, examples, exports, or integration points.
-
-Use this format:
-
-```markdown
-## Review Guide
-
-### Root: <Core Change>
-
-**<description>**
-
-<details>
-<summary>X files</summary>
-
-| File              | Status                 |
-| ----------------- | ---------------------- |
-| `path/to/file.ts` | added/modified/deleted |
-
-</details>
-
----
-
-### Level 1: <Changes that depend on Root>
-
-**<description>**
-
-<details>
-<summary>X files</summary>
-
-| File              | Status                 |
-| ----------------- | ---------------------- |
-| `path/to/file.ts` | added/modified/deleted |
-
-</details>
-```
+If you include a Review Guide, read [references/review-guide.md](references/review-guide.md) for the dependency layout and template.
 
 ## Constraints
 
