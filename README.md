@@ -83,7 +83,7 @@ Matt's repo also adds a one-time `/setup-matt-pocock-skills` that wires an issue
 After this repo is on GitHub:
 
 ```bash
-npx skills@latest add <owner>/<repo>
+npx skills@latest add yuvalshim/skills
 ```
 
 From a checkout (now):
