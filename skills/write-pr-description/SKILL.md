@@ -23,9 +23,9 @@ Pick the format that lets a reviewer understand the PR fastest. Do not use both 
 
 **Option A — Summary only.** Use when the PR is primarily an internal refactor, configuration or infrastructure change, or logic change with no meaningful visible API surface. Code examples would add little value.
 
-**Option B — At a Glance only.** Use when the PR is primarily an API or prop change, a new component or hook, a renamed export, or another change that is clearest through a small code example. Avoid prose that merely restates the code.
+**Option B — At a Glance only.** Use when the PR is primarily an interface or contract change, such as a changed API, prop, schema, event, configuration, endpoint, component, hook, service, or export. Use a small code, request, schema, or configuration example when it communicates the change faster than prose. Avoid prose that merely restates the example.
 
-**Option C — Both.** Use when the PR combines visible API changes with context that code alone cannot explain. Keep the Summary to 1-2 short sentences covering only what the examples do not make obvious.
+**Option C — Both.** Use when the PR combines interface or contract changes with context that examples alone cannot explain. Keep the Summary to 1-2 short sentences covering only what the examples do not make obvious.
 
 Template:
 
@@ -50,16 +50,16 @@ Template:
 - Group related changes into short paragraphs of 2-4 sentences.
 - Keep one theme per paragraph.
 - Lead with the most important change.
-- Use inline code for identifiers such as `LabelValue` or `create-pr`.
+- Use inline code for identifiers such as `UserService`, `POST /api/users`, or `users.role`.
 - Avoid bullet lists.
 - If the PR has one concern, one paragraph is enough.
 
 ### At a Glance rules
 
 - Use fenced code blocks with the appropriate language.
-- For API or prop changes, prefer a Before / After example.
+- For interface or contract changes, prefer a Before / After example.
 - Show only the changed lines plus enough context to orient the reviewer.
-- For new components or hooks, show one short realistic Usage example.
+- For new components, hooks, endpoints, services, jobs, schemas, or configuration, show one short realistic usage, request, query, or configuration example.
 - Include at most 2-3 examples and choose only the most impactful ones.
 - Do not add explanatory prose inside the section beyond a short bold heading for each example.
 

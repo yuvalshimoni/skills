@@ -13,14 +13,28 @@ Example of a prop rename:
 ```
 ````
 
-Example of a new component:
+Example of an API contract change:
 
 ````markdown
 ## At a Glance
 
-**New `AssetDescriptor` component**
+**`POST /api/users` — accept a role**
 
-```tsx
-<AssetDescriptor icon={<ServerIcon />} name="prod-db-01" type="Database Instance" />
+```diff
+- POST /api/users { "name": "Ada" }
++ POST /api/users { "name": "Ada", "role": "admin" }
+```
+````
+
+Example of a database schema change:
+
+````markdown
+## At a Glance
+
+**Add `users.role`**
+
+```sql
+ALTER TABLE users
+ADD COLUMN role text NOT NULL DEFAULT 'member';
 ```
 ````

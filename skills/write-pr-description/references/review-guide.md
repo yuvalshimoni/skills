@@ -18,9 +18,9 @@ Use this format:
 <details>
 <summary>X files</summary>
 
-| File              | Status                 |
-| ----------------- | ---------------------- |
-| `path/to/file.ts` | added/modified/deleted |
+| File           | Status                 |
+| -------------- | ---------------------- |
+| `path/to/file` | added/modified/deleted |
 
 </details>
 
@@ -33,9 +33,9 @@ Use this format:
 <details>
 <summary>X files</summary>
 
-| File              | Status                 |
-| ----------------- | ---------------------- |
-| `path/to/file.ts` | added/modified/deleted |
+| File           | Status                 |
+| -------------- | ---------------------- |
+| `path/to/file` | added/modified/deleted |
 
 </details>
 ```
