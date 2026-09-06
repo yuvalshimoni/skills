@@ -63,7 +63,7 @@ Template:
 - Include at most 2-3 examples and choose only the most impactful ones.
 - Do not add explanatory prose inside the section beyond a short bold heading for each example.
 
-Need a worked example? Read [references/examples.md](references/examples.md).
+Need a worked example? Read [references/at-a-glance-examples.md](references/at-a-glance-examples.md).
 
 ## 3. Decide whether a Review Guide is useful
 
@@ -84,7 +84,7 @@ Skip it for:
 
 When in doubt, omit it.
 
-If you include a Review Guide, read [references/review-guide.md](references/review-guide.md) for reviewer-oriented grouping and the template.
+If you include a Review Guide, read [references/review-guide-grouping.md](references/review-guide-grouping.md) for reviewer-oriented grouping and the template.
 
 ## Constraints
 
