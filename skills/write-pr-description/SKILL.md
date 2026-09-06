@@ -7,8 +7,6 @@ description: Write a clear, intuitive PR description from the current branch cha
 
 Write a pull request description that helps a reviewer quickly understand what changed, why it changed, and where to focus their attention.
 
-If `auto=true`, make best-judgment decisions. Do not ask questions.
-
 ## 1. Scope the PR changes
 
 Identify the files changed by the current PR and understand the changes within those files.
