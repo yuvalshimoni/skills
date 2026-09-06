@@ -7,5 +7,5 @@
   },
   "license": "MIT",
   "keywords": ["skills"],
-  "skills": ["./skills/ask", "./skills/new-skill"]
+  "skills": ["./skills/ask", "./skills/new-skill", "./skills/write-pr-description"]
 }

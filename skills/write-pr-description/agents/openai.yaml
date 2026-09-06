@@ -1,0 +1,3 @@
+interface:
+  display_name: "Write PR description"
+  short_description: "Describe the current branch for reviewers"

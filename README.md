@@ -42,6 +42,7 @@ A repo with a single `SKILL.md` at the root is a one-skill repo. A repo with sev
 skills/
   ask/SKILL.md
   new-skill/SKILL.md
+  write-pr-description/SKILL.md
 ```
 
 That is enough for:
@@ -72,6 +73,10 @@ Matt's repo also adds a one-time `/setup-matt-pocock-skills` that wires an issue
 
 - [`/ask`](./skills/ask/SKILL.md) — which skill should I run?
 - [`/new-skill`](./skills/new-skill/SKILL.md) — add another skill to this repo
+
+**Model-invoked** (you can type them; the agent can also start them)
+
+- [`/write-pr-description`](./skills/write-pr-description/SKILL.md) — write a reviewer-focused PR description from the branch diff
 
 ## Install
 

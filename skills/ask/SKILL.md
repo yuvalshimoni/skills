@@ -13,8 +13,9 @@ Read every `skills/*/SKILL.md` in this repo (frontmatter only is enough) and rec
 ## How to choose
 
 1. If the user wants to **add or edit a skill in this repo**, send them to `/new-skill`.
-2. If they named a skill that exists, tell them to run it. Do not run a user-invoked skill yourself.
-3. If nothing here fits, say so. Do not invent a skill on the spot. Offer to run `/new-skill` to create one.
+2. If they want a **PR description** written or updated, call the Skill tool with `write-pr-description`.
+3. If they named a skill that exists, tell them to run it. Do not run a user-invoked skill yourself.
+4. If nothing here fits, say so. Do not invent a skill on the spot. Offer to run `/new-skill` to create one.
 
 ## Rules
 
