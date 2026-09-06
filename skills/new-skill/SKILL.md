@@ -103,4 +103,3 @@ npx skills add <owner>/<repo> --skill <name>
 - Put `SKILL.md` at the repo root (that makes this a single-skill repo).
 - Use uppercase, spaces, underscores, or consecutive hyphens in `name`.
 - Start another user-invoked skill from this one. Tell the human to type it.
-- Invent process machinery (issue trackers, ADRs, docs sites). That is not required for a skill to install.
