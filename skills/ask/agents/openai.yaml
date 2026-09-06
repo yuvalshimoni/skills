@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask"
+  short_description: "Which skill should I run?"
+policy:
+  allow_implicit_invocation: false

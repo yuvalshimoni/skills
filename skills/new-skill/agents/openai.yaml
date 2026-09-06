@@ -1,0 +1,5 @@
+interface:
+  display_name: "New skill"
+  short_description: "Add a skill to this repo"
+policy:
+  allow_implicit_invocation: false

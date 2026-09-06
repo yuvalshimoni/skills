@@ -1,0 +1,16 @@
+{
+  "name": "yuval",
+  "owner": {
+    "name": "Yuval Shim'oni"
+  },
+  "description": "Yuval's agent skills, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "yuval-skills",
+      "source": "./",
+      "description": "Yuval's agent skills.",
+      "category": "productivity",
+      "keywords": ["skills"]
+    }
+  ]
+}

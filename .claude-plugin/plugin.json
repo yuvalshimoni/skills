@@ -1,0 +1,11 @@
+{
+  "name": "yuval-skills",
+  "version": "0.1.0",
+  "description": "Yuval's agent skills.",
+  "author": {
+    "name": "Yuval Shim'oni"
+  },
+  "license": "MIT",
+  "keywords": ["skills"],
+  "skills": ["./skills/ask", "./skills/new-skill"]
+}
