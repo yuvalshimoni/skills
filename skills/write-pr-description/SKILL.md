@@ -84,7 +84,7 @@ Skip it for:
 
 When in doubt, omit it.
 
-If you include a Review Guide, read [references/review-guide.md](references/review-guide.md) for the dependency layout and template.
+If you include a Review Guide, read [references/review-guide.md](references/review-guide.md) for reviewer-oriented grouping and the template.
 
 ## Constraints
 

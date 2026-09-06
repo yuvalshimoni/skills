@@ -1,41 +1,43 @@
-# Organize the Review Guide by dependency
+# Organize the Review Guide for the reviewer
 
-When a Review Guide is useful, organize only the changed files in the PR by review dependency.
+When a Review Guide is useful, organize only the changed files in the PR by review order and concern.
 
-- **Root** — the core change and best place to start reviewing.
-- **Level 1** — changes that directly depend on the root.
-- **Level 2+** — downstream changes such as tests, documentation, examples, exports, or integration points.
+Use dependency order by default, but group parallel changes by review concern when that creates a clearer path.
+
+- **Start here** — the behavior, contract, schema, or other core change that frames the PR.
+- **Then review** — consumers, integrations, persistence, and other changes that build on the core.
+- **Finish with** — tests, documentation, configuration, exports, generated files, and supporting changes.
+
+Name each group after its actual concern. Explain why the files belong together and add a **Focus** note only when the reviewer should inspect a specific risk, invariant, or tradeoff.
+
+List files directly. Do not hide them in `<details>` blocks or repeat added/modified/deleted status that the PR interface already shows.
 
 Use this format:
 
 ```markdown
 ## Review Guide
 
-### Root: <Core Change>
+### 1. Start here: <Core concern>
 
-**<description>**
+<Why these files belong together and why the reviewer should start here.>
 
-<details>
-<summary>X files</summary>
+- `path/to/file`
+- `path/to/another-file`
 
-| File           | Status                 |
-| -------------- | ---------------------- |
-| `path/to/file` | added/modified/deleted |
+**Focus:** <Specific risk, invariant, or tradeoff. Omit when there is none.>
 
-</details>
+### 2. Then review: <Dependent or parallel concern>
 
----
+<How this group relates to the core change.>
 
-### Level 1: <Changes that depend on Root>
+- `path/to/file`
+- `path/to/another-file`
 
-**<description>**
+**Focus:** <Specific risk, invariant, or tradeoff. Omit when there is none.>
 
-<details>
-<summary>X files</summary>
+### 3. Finish with: <Supporting concern>
 
-| File           | Status                 |
-| -------------- | ---------------------- |
-| `path/to/file` | added/modified/deleted |
+<What these supporting files verify, document, configure, or expose.>
 
-</details>
+- `path/to/file`
 ```
