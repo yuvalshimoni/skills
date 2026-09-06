@@ -1,6 +1,6 @@
 ---
 name: write-pr-description
-description: Write a clear, intuitive PR description from the current branch changes. Uses prose, code examples, or both — whichever helps a reviewer grasp the PR fastest. Use when user says "write PR description", "describe this PR", "update the PR body", or a PR needs a description before review.
+description: Write or update a pull request description from the current branch diff.
 ---
 
 # Write PR Description
