@@ -1,40 +1,46 @@
 # At a Glance examples
 
-Example of a prop rename:
+Example of frontend behavior:
 
 ````markdown
 ## At a Glance
 
-**`LabelValue` — prop rename**
+**Show progress while checkout is submitted**
 
 ```diff
-- <LabelValue overline="Status" value="Active" />
-+ <LabelValue label="Status" value="Active" />
+- <Button type="submit">Pay now</Button>
++ <Button type="submit" disabled={isPending}>
++   {isPending ? "Processing…" : "Pay now"}
++ </Button>
 ```
 ````
 
-Example of an API contract change:
+Example of backend authorization behavior:
 
 ````markdown
 ## At a Glance
 
-**`POST /api/users` — accept a role**
+**Scope session revocation to the signed-in user**
 
 ```diff
-- POST /api/users { "name": "Ada" }
-+ POST /api/users { "name": "Ada", "role": "admin" }
+- await db.session.delete({ where: { id: sessionId } });
++ await db.session.delete({
++   where: { id: sessionId, userId: user.id },
++ });
 ```
 ````
 
-Example of a database schema change:
+Example of a shared API contract change:
 
 ````markdown
 ## At a Glance
 
-**Add `users.role`**
+**Allow project visibility to be configured**
 
-```sql
-ALTER TABLE users
-ADD COLUMN role text NOT NULL DEFAULT 'member';
+```diff
+ export const createProjectInput = z.object({
+   name: z.string().min(1),
++  visibility: z.enum(["private", "public"]).default("private"),
+ });
 ```
 ````
