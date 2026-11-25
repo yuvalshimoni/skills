@@ -1,20 +1,38 @@
 ---
 name: space
-description: Create a space through a short conversation, shared understanding, and an approved repo setup.
+description: Give a subject that outlives any one chat a durable home on disk, so every fresh session starts from the same shared understanding and several sessions can work on it in parallel.
 disable-model-invocation: true
 ---
 
-# Create a space
+You keep coming back to the same subject in new chats. Each thread starts cold, so you re-explain the context, the decisions and why you made them, and the words you use. Meanwhile the real state of the work is scattered across a dozen threads that only you can stitch together. The chat isn't the problem. The problem is that the chat is the only place the work lives.
 
-A space is a durable home for a subject or effort. It can hold several migrations, ongoing research, or a project with an end. Sessions come and go; the shared understanding stays.
+A **space** gives the work a place to live that isn't a chat. It's a folder: plain files that hold what the work *is* (its purpose, its **shared language**, what was decided and why, what's still open), plus pointers to the repos and sources it touches. Threads become disposable. You start any session in the space, it reads the folder, and it arrives already knowing what you know. The chaos stays in the conversation. The space keeps what was decided.
 
-Your job is to understand what the developer means and prepare a home where fresh sessions can work from that understanding. Choosing the first task belongs to those sessions. The result is plain files: its own instructions keep it useful without this creation skill installed.
+This skill creates the space through one short conversation. It does not do the work.
 
-## Conversation style
+## Home, not task
 
-When asking a question, use plain language, ask one at a time, and end with **Suggested:** an answer grounded in what the developer has shared. Confirm known choices together in the approval draft rather than asking them again. Look up discoverable facts yourself; ask the developer for meaning, missing sources and choices.
+A space is the home of an effort, not a to-do list. It may hold several migrations, ongoing research, or a project with an end, and it doesn't need a finish line. Creating it never picks the first task. That choice belongs to the sessions that start there. If you feel the pull to just start working, the space is ready and it's time to hand off.
 
-The steps below guide your process; present the conversation as a few natural exchanges, not a numbered interview. Let the missing understanding determine the questions. Distinguish what the developer agreed, what you verified, what you suggest and what remains uncertain; use those distinctions where they matter rather than tagging every sentence.
+## Every fact has one home
+
+Each thing worth keeping lives in exactly one file, and everything else points to it. Purpose, shared language and standing context go in `AGENTS.md`. Supplied material goes in `sources/`. Knowledge that several lines of work need goes in `shared/`. Each line of work gets its own `streams/<name>/README.md`. Dated events that matter beyond one stream go in `LOG.md`. `AGENTS.md` works as a **map**: it gives the gist and links to the file that holds the detail, and never copies it. If a fact lives in two places, they drift apart, and a fresh session can't tell which one is true.
+
+## Parallel by design
+
+Because the understanding lives in files and not in a thread, several sessions can work in one space at once. Each **stream** keeps its own notes, and each connected repo is either a **worktree** (an isolated checkout on its own branch) or a **pointer** (an existing checkout that other work shares). Parallel sessions don't overwrite each other, and none of them needs the conversation where the space was born.
+
+## Mark what you know
+
+Keep the difference between a **decision** (agreed), a **finding** (verified), a **proposal** (suggested) and an **open question** (unknown, with a note on what would answer it). A fresh session that treats a proposal as a decision will build the wrong thing with confidence.
+
+## Ask like a collaborator
+
+Ask one question at a time, in plain language, and end each with **Suggested:** an answer grounded in what the developer has already said. Look up anything you can discover yourself, and ask the developer only for meaning, missing sources and choices.
+
+## Keeping it true
+
+Notes drift as the work moves. Every space ships with its own `space-sync` skill, which checks each stream's notes against the code and the cited evidence, repairs the map, and logs what changed. A space keeps working long after this skill has been uninstalled.
 
 ## 1. Understand the purpose
 
@@ -48,7 +66,7 @@ Questions that require investigation belong in the space: record what would answ
 
 ## 4. Prepare the repos
 
-A space can use no repos, worktrees, pointers, or a mix. When it uses repos, follow [Workspace setup](references/workspace.md) to inspect them and agree on how each connects. This is setup, not a request to choose the first task.
+A space can use no repos, worktrees, pointers, or a mix. When it uses repos, follow [Workspace setup](references/workspace.md) to inspect them and agree on how each connects.
 
 **Done when:** each repo has a proposed mode, exact path and branch plan, plus checkout-only or running scope; or the developer's description makes clear that no repos are needed.
 
@@ -85,6 +103,6 @@ Read the files as a fresh session. Check that they answer:
 
 Check all links, source pointers, recorded repo paths and branches, and both Claude compatibility links. Confirm the work map matches whatever work folders actually exist. Fix missing answers in their proper home. Report anything you could not verify.
 
-Hand over the path, connected repos, readiness and gaps. A checkout alone is not a running app. Tell the developer to start a fresh agent session from the space folder; that session can choose the work. Explain that the local `space-sync` skill checks notes when they drift. Project skills require folder trust: in Pi, use `/trust`; in Claude Code, accept the folder trust prompt.
+Hand over the path, connected repos, readiness and gaps. A checkout alone is not a running app. Tell the developer to start a fresh agent session from the space folder. Project skills require folder trust: in Pi, use `/trust`; in Claude Code, accept the folder trust prompt.
 
 **Done when:** the files provide shared understanding without this conversation, paths and setup are verified or explicitly marked unverified, and the developer knows how to start a session there.
