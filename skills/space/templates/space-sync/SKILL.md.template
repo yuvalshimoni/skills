@@ -1,0 +1,39 @@
+---
+name: space-sync
+description: Check this space against reality and repair its notes.
+disable-model-invocation: true
+---
+
+# Sync the space
+
+Run from the space root. Check and repair notes; leave code, branches, services and databases unchanged. Follow the approval boundaries in `AGENTS.md` when a correction affects the space's shared understanding.
+
+## 1. Read the space
+
+Read `AGENTS.md`, all of `LOG.md`, and every existing `streams/*/README.md`, including work missing from **Map**. A space with no work recorded yet is valid. Check the paths under **Repos** and the current branches without switching them.
+
+**Done when:** all work READMEs have been read and each recorded repo is reachable or listed as unavailable, with branch mismatches identified.
+
+## 2. Check the notes
+
+Compare each work README's current state, next step and blockers with its supporting files, cited evidence and relevant code. Check against the recorded branch; a different checkout branch is a mismatch, not proof that work vanished. Mark finished work as finished when supported by evidence.
+
+Correct claims you can disprove. Mark claims you attempted but could not verify as unverified, with the reason. Leave untested claims unchanged. Preserve the difference between proposals, decisions and findings. For any correction requiring agreement, report the proposed change instead of applying it.
+
+**Done when:** each line of work is confirmed, corrected or listed as unverifiable, with the evidence or limitation recorded. With no work yet, continue to the map.
+
+## 3. Repair the map and log
+
+Make **Map** match the existing work folders. Check that every source and shared document has a pointer with a reading condition, and that local targets resolve. Report unavailable external sources; a missing source is an access gap, not a reason to erase its context.
+
+Append missing cross-cutting events to `LOG.md`, pointing to their home. Use the event date when recorded, otherwise today's date with the event date marked unknown. Label added entries “logged by sync”. Preserve existing history.
+
+**Done when:** work and context are findable, broken pointers are repaired or reported, and durable cross-cutting events have log entries.
+
+## 4. Report
+
+Summarize corrections, unverifiable claims, repo mismatches and decisions needed. Propose any knowledge that should become shared context in `AGENTS.md`, or detail that should move out to `shared/`. A space's purpose does not become obsolete merely because individual tasks finish.
+
+Append a dated sync entry to `LOG.md` describing what changed and any remaining gaps.
+
+**Done when:** the developer knows what was checked, what changed and what still needs their agreement.

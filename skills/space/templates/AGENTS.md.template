@@ -1,0 +1,78 @@
+# {{NAME}}
+
+This folder is a space: a durable home for the subject described below. Start sessions for this subject here, including when the code lives elsewhere. Sessions come and go; the shared understanding stays.
+
+## What this space is for
+{{PURPOSE_AND_SCOPE}}
+
+## Shared language
+{{TERMS_AND_MEANINGS}}
+
+## What to know
+{{CONTEXT_AND_DECISIONS_WITH_REASONS_AND_STATUS}}
+
+## How the developer wants to work
+{{BOUNDARIES_PREFERENCES_AND_PERMISSIONS}}
+
+## Open questions
+{{QUESTIONS_WHAT_WOULD_ANSWER_THEM_AND_WHAT_THEY_LIMIT}}
+
+## Repos
+{{REPO_PATHS_MODES_BRANCHES_INSTRUCTION_POINTERS_AND_SETUP_STATUS_OR_NONE}}
+
+## How to work here
+
+### Arrive with the shared understanding
+
+Read the end of `LOG.md`, then any source or shared document whose reading condition under **Map** applies to your work. If you are continuing a line of work, read its README under `streams/` too. Choose work with the developer; the space itself need not have a finish line or a preselected task.
+
+Before editing a connected repo, read its instructions listed under **Repos**, plus instructions along the path to the files you will touch. Check the live branch against the recorded expectation. If it differs, ask before editing or switching. A pointer uses an existing checkout: your edits there affect everyone sharing it. A worktree has its own checkout, but shares the source repo's git history and branch namespace.
+
+### Give each fact one home
+
+- `AGENTS.md`: purpose, shared language and context every session needs.
+- `sources/`: supplied material, with origin, status and access gaps.
+- `shared/`: knowledge developed here that several lines of work need when relevant.
+- `streams/<name>/`: one line of work, created when work needs durable notes. Its README holds current state; supporting files live beside it.
+- `LOG.md`: dated events that matter beyond one line of work, each pointing to the full account.
+
+A quick question can stay a quick answer. When durable work begins, create its folder and link it under **Map**. Open its README with:
+
+```markdown
+# <Name>
+
+**What this is for:** <how it belongs in the space>
+**What was asked:** <the developer's requirements, using their words>
+
+## Where it stands
+<current state and how we know>
+
+## Next step
+<the next action, or the choice still needed>
+
+## Waiting on
+<blockers or none>
+```
+
+Below that, keep relevant decisions and reasons, findings and evidence, failed approaches, working preferences and permissions. Record any approved branch specific to this work. Read code and git fresh for details they already contain; notes preserve intent, conclusions and lessons that would otherwise disappear with the conversation.
+
+### Keep the notes true as you work
+
+Write a decision, finding or change of understanding when losing this conversation would lose it. Preserve the developer's wording where it carries a requirement or decision. Distinguish evidence from belief, and an accepted decision from an idea being considered.
+
+Describe the state, not your activity: “not started” remains useful if you disappear; “I'm working on it” does not. Before wrapping up, update the current state, next step and blockers in your work's README.
+
+When something matters beyond your work, append a line to `LOG.md` with the date, work name, event and a pointer to its home. The log records history; the linked document holds the current account.
+
+### Share the space with other sessions
+
+There are no live notifications or file locks supplied by this space. Before changing shared material or making a cross-cutting decision, after a pause, or when the developer mentions other work, reread the end of `LOG.md`, **Map** from disk and the notes that own the topic.
+
+Read shared files immediately before editing them; change only the relevant lines and preserve others' work. Sessions sharing a work README use separate headings for their contributions. Ask the developer to resolve incompatible changes rather than overwriting another session's understanding.
+
+Update notes and **Map** as part of the work. Correct factual drift and tell the developer what changed. Changes to the purpose, shared language, working boundaries or space-wide decisions in this file need their agreement; propose the exact revision. Installing dependencies, starting services, changing a database, committing and pushing each need explicit permission for that action.
+
+Keep secrets and unneeded personal data out of the space. If the notes may have drifted, the developer can run `space-sync` to check them against reality. When asked where things stand, read the current map, relevant work notes and recent log; verify code-dependent claims before presenting them as current.
+
+## Map
+{{WORK_AND_CONTEXT_POINTERS_WITH_READING_CONDITIONS}}
