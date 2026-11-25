@@ -1,0 +1,5 @@
+interface:
+  display_name: "Create a space"
+  short_description: "Set up a durable home for a subject or effort"
+policy:
+  allow_implicit_invocation: false

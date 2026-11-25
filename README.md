@@ -8,6 +8,7 @@ Agent skills for Cursor, Claude Code, Codex, and other agents. Install with `npx
 
 - [`/ask`](./skills/ask/SKILL.md) — which skill should I run?
 - [`/new-skill`](./skills/new-skill/SKILL.md) — add another skill to this repo
+- [`/space`](./skills/space/SKILL.md) — give a subject a durable home on disk that outlives any one chat
 
 **Model-invoked** (you or the agent can start them)
 
@@ -19,6 +20,7 @@ Agent skills for Cursor, Claude Code, Codex, and other agents. Install with `npx
 skills/
   ask/SKILL.md
   new-skill/SKILL.md
+  space/SKILL.md
   write-pr-description/SKILL.md
 ```
 
